@@ -1,0 +1,575 @@
+/* POPPINS FONT FAMILY */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+  background-color: #e5f7fa;
+  max-width: 1690px;
+  margin: 0 auto;
+}
+
+/* ------------------Header Section-------------------- */
+
+header{
+  background-color: #3013a7;
+  height: 50vh;
+  display: flex;
+  padding-top: 20px;
+  position: relative;
+}
+
+nav{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+  cursor: pointer;
+  color: #fff;
+  right: 30px;
+}
+
+nav a.nav-item-active{
+  background-color: #fff;
+  color: #160753;
+  padding: 5px 8px;
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
+}
+
+svg.nav-item{
+  margin-top: 10px;   
+}
+
+div img.logo{
+  margin-left: 30px;
+}
+
+header div.header-text{
+  position: absolute;
+  bottom: 100px;
+  margin-left: 30px;
+  color: #fff;
+ 
+}
+
+header div.header-text h2{
+  font-size: 50px;
+}
+
+header div.header-text p{
+  font-size: 22px;
+  margin-top: 10px;
+  color: #04d6d6;
+}
+
+div img.header-image{
+  position: absolute;
+  right: 0;
+  width: 600px;
+  top: 60px;
+}
+
+@media only screen and (max-width: 1450px) {
+  div img.header-image{
+    position: absolute;
+    bottom: 10px;
+    margin-left: 30px;
+    color: #fff;
+    width: 500px;
+  }
+  
+  header div.header-text h2{
+    font-size: 25px;
+    
+  }
+
+  header div.header-text p{
+    font-size: 18px;
+    margin-top: 10px;
+    color: #04d6d6;
+  }
+}
+
+@media only screen and (max-width: 1080px){
+
+  div img.header-image{
+    display: none;
+  }
+  
+  @media only screen and (max-width: 700px){
+    nav{
+      display: none;
+    }
+
+    header div.header-text h2{
+      font-size: 20px;
+    }
+
+    header div.header-text p{
+      font-size: 16px;
+      margin-top: 10px;
+      color: #04d6d6;
+    }
+  }
+
+}  /* ----------------companies----------------- */
+
+div.companies{
+  display: flex;
+  flex-direction: row;
+  gap: 120px;
+  margin-left: 30px;
+  margin-top: 20px; 
+}
+
+.companies .company-items{
+  text-decoration: none;
+  color: #000000;
+  font-weight: 900;
+  font-size: 30px; 
+}
+
+@media only screen and (max-width: 1550px){
+  div.companies{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-left: 30px;
+    margin-top: 20px; 
+  }
+
+  .companies .company-items{
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    font-size: 25px; 
+  }
+}
+/*----------------- Api section ----------------*/
+
+div.api{
+  height: 70vh;
+  margin-top: 120px;
+  margin-left: 30px;
+}
+
+h1.api-heading{
+  font-size: 50px;
+  font-weight: 900;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+div.cards{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+div.cards div.card-active{
+  background-color: #fff;
+  padding: 20px 0 20px 15px;
+  width: 220px;
+  border-radius: 10px;
+}
+
+div.cards div.card-active h3{
+  font-size: 20px;
+  margin-left: 0;
+}
+
+div.cards div.card-active p{
+  margin: 0;
+}
+
+div.cards div.card{
+  padding: 35px 20px;  
+}
+
+div.cards div.card:nth-child(3){
+  padding-top: 8px;
+}
+
+div.cards :not(:first-child){
+  margin-left: 40px;
+}
+
+div.cards div.card h3{
+font-size: 20px;
+margin-left: 0;
+}
+
+div.cards div.card p{
+  margin: 0;
+}
+
+
+@media only screen and (max-width: 870px){
+  h1.api-heading{
+    text-align: center;
+  }
+
+  div.cards{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  div.cards div.card-active{
+    background-color: none;
+    padding: 0;
+    width: 150px;
+    border-radius: 10px;
+  }
+  
+  div.cards div.card-active h3{
+    display: none;
+  }
+  
+  div.cards div.card-active p{
+    display: none;
+  }
+  
+  div.cards div.card{
+    padding: 35px 20px;  
+  }
+  
+  div.cards div.card:nth-child(3){
+    padding-top: 35px;
+  }
+  
+  div.cards :not(:first-child){
+    margin-left: 10px;
+  }
+  
+  div.cards div.card h3{
+    display: none;
+  }
+  
+  div.cards div.card p{
+    display: none;
+  }
+}
+/* ------------::after- used to add arrow mark after the last child---------------------------- */
+div.cards:last-child::after{
+ content: ">";
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 50px;
+ color: #fff;
+ background-color: #3013a7;
+ margin-left: 80px;
+ width: 40px;
+ height: 40px;
+ border: none;
+ padding: 10px 10px;
+ border-radius: 50%;
+}
+
+@media only screen and (max-width: 870px){
+  div.cards:last-child::after{
+    display: none;
+  }
+}
+
+/* ----------------Blog section------------------- */
+
+div.blog-heading{
+  
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 870px){
+  div.blog-heading{
+    text-align: center;
+  }
+}
+/* ----------::after is been used----------- */
+div.blog-heading::after{
+  content: "See All Articles";
+  display: flex;
+  position: absolute;
+  right: 110px;
+  top: 1080px;
+  color:#3013a7;
+  font-size: larger; 
+  cursor: pointer;
+}
+
+div.blog-cards{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 450px;
+  
+}
+
+div.blog-image img{
+ width: 350px;
+}
+
+div.blog-card{
+  position: relative;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+div.blog-content{
+  
+  position: absolute;
+  top: 0;
+  left:350px;
+  width: 380px;
+  height: 402px;
+  background-color: #fff;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  padding-left: 40px;
+   
+}
+
+div.blog-content h6{
+  font-size: 15px;
+  margin-top: 40px;
+  
+  color: #3013a7;
+}
+
+div.blog-content h3{
+  font-weight: bolder;
+  font-size: 27px;
+  margin-top: 10px;
+  
+}
+
+div.blog-bottom{
+  position: absolute;
+  bottom: -30px;
+  left: 400px;
+  
+}
+
+div.blog-bottom .blog-card-bottom-image{
+  border: 3px solid #fff;
+  border-radius: 50%;
+  width: 70px;
+}
+
+div.blog-author{
+  position: absolute;
+  bottom: 20px;
+  left: 500px;
+  width: 200px;
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 870px){
+  div.blog-cards{
+    overflow-x: auto;
+  }
+
+}
+
+/* -----------------FAQ SECTION------------------ */
+
+div.faq-section{
+  background-color: #c4f2f5;
+  margin-top: 50px;
+  height: 50vh;
+  display: flex;
+  position: relative;
+}
+
+div.faq-content{
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+div.faq-content :nth-child(1){
+  font-size: 50px;
+  font-weight: 900;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+div.faq-content h4{
+  margin-top: 10px;
+}
+
+div.faq-content :nth-child(3){
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+div.faq-content :nth-child(4){
+  margin-top: 20px;
+  padding:10px 20px;
+  color: #fff;
+  background-color: #3013a7;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.faq-image{
+  position: absolute;
+  right: 0;
+}
+
+div.faq-image img{
+  width: 751px;
+}
+
+@media only screen and (max-width: 1370px){
+  div.faq-image{
+   display: none;
+  }
+}
+/* ---------------Download------------------------ */
+
+
+div.download-section{
+  height: 20ch;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 30px;
+}
+
+div.download-section h1{
+  font-weight: bolder;
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+div.download-section h1 span{
+  font-weight: 300;
+}
+
+
+div.download-email{
+  position: relative;
+  margin-right: 40px;
+  
+}
+
+div.download-email form input{
+  width: 700px;
+  padding-top: 20px ;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  border: none;
+  border-radius: 40px;
+  background-color: #c4f2f5;
+}
+
+div.download-email form button{
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  padding: 17px 50px;
+  border: none;
+  border-radius: 40px;
+  color: #fff;
+  background-color: #3013a7;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 870px){
+  div.download-section{
+    overflow-x: auto;
+
+  }
+
+}
+/* ------------Footer------------------ */
+
+div.footer-section{
+  padding-left: 30px;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3013a7;
+  color: #fff;
+}
+
+.footer-left img.footer-logo{
+  width: 180px;
+  padding-bottom: 15px;
+}
+
+div.footer-section ul.list{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.footer-section .footer-left .list .list-items ~ .list-items:not(:last-of-type)::after {
+  content: "";
+  width: 2px;
+  height: 50%;
+  margin-left: 20px;
+  display: inline-block;
+  background-color: #FFFFFF;
+}
+
+img.footer-logos{
+ width: 50px;
+ margin-left: 20px; 
+ cursor: pointer;
+}
+
+ ul.logos-list{
+  margin-top: 40px;
+  margin-right: 40px;
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  cursor: pointer;
+}
+
+div.footer-right ul.logos-list .list-items:not(:last-of-type)::after{
+  content: "";
+  width: 2px;
+  height: 50%;
+  margin-left: 20px;
+  display: inline-block;
+  background-color: #FFFFFF;
+}
+
+@media only screen and (max-width: 870px){
+  div.footer-section ul.list{
+    display: none;
+  }
+
+  ul.logos-list{
+    display: none;
+  }
+}
