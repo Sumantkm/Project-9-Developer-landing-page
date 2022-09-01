@@ -12,4 +12,4 @@
 - 6hrs taken to complete the project.
 ***
 ## Project screenshot :
-![Project-9/Developer landing page](9.PNG) 
+![Project-9/Developer landing page](9.png) 
